@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Header } from './components/Header';
 import { PersonaManager } from './components/PersonaManager';
 import { ChatInterface } from './components/ChatInterface';
 import { ReflectionEngine } from './components/ReflectionEngine';
 import { SystemStatus } from './components/SystemStatus';
 import { PersonaDetails } from './components/PersonaDetails';
-import { PersonaInstance } from './types/api';
+import type { PersonaInstance } from './types/api';
 
 function App() {
   const [activePersonas, setActivePersonas] = useState<PersonaInstance[]>([]);

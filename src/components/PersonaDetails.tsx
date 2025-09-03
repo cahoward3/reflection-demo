@@ -1,6 +1,6 @@
 import React from 'react';
 import { User, Brain, Settings, Clock } from 'lucide-react';
-import { PersonaInstance } from '../types/api';
+import type { PersonaInstance } from '../types/api';
 import { motion } from 'framer-motion';
 
 interface PersonaDetailsProps {

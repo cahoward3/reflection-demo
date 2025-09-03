@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { User, Play, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
-import { PersonaInstance } from '../types/api';
+import type { PersonaInstance } from '../types/api';
 import { personaApi } from '../services/api';
 
 interface PersonaManagerProps {

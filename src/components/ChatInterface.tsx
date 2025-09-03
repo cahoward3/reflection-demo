@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, MessageSquare, Bot, User, Loader2 } from 'lucide-react';
-import { PersonaInstance } from '../types/api';
+import type { PersonaInstance } from '../types/api';
 import { orchestratorApi } from '../services/api';
 import { motion, AnimatePresence } from 'framer-motion';
 

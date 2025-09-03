@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Activity, Server, Database, Zap, RefreshCw } from 'lucide-react';
 import { healthApi } from '../services/api';
-import { PersonaInstance } from '../types/api';
+import type { PersonaInstance } from '../types/api';
 
 interface SystemStatusProps {
   activePersonas: PersonaInstance[];

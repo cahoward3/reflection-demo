@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Flame, Play, FileText, Download, Loader2, CheckCircle, AlertTriangle } from 'lucide-react';
-import { PersonaInstance, BurnReport } from '../types/api';
+import type { PersonaInstance, BurnReport } from '../types/api';
 import { areApi } from '../services/api';
 import { motion } from 'framer-motion';
 
