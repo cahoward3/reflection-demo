@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { PersonaInstance, ChatRequest, ChatResponse, BurnReport } from '../types/api';
+import type { PersonaInstance, ChatRequest, ChatResponse, BurnReport } from '../types/api';
 
 // Configure the base API URL - update this to match your deployed backend
 const API_BASE_URL = process.env.VITE_API_URL || 'http://localhost:8000';
