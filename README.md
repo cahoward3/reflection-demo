@@ -1,69 +1,83 @@
-# React + TypeScript + Vite
+# Aurora Genesis Engine - Frontend Interface
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An elegant web interface for the Aurora Genesis Engine, providing comprehensive management and interaction capabilities for multi-agent AI systems.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🤖 Persona Management
+- **Autonomous Instantiation Service (AIS)**: Activate persona blueprints into live instances
+- **Real-time Status Monitoring**: Track active personas and their states
+- **Dynamic State Visualization**: View persona state vectors and session context
 
-## Expanding the ESLint configuration
+### 💬 Supernova Orchestrator
+- **Interactive Chat Interface**: Communicate directly with active persona instances
+- **Multi-persona Support**: Manage conversations across multiple AI agents
+- **Real-time Response Generation**: Seamless integration with the backend orchestrator
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🔥 Aurora Reflection Engine (A.R.E.)
+- **Controlled Burn Testing**: Run validation and stress tests on persona instances
+- **Comprehensive Reporting**: Generate detailed analysis reports (MRJ and Markdown formats)
+- **Emergent Behavior Analysis**: Monitor and analyze AI agent behaviors
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 📊 System Monitoring
+- **Health Checks**: Real-time API connectivity monitoring
+- **Performance Metrics**: Track system status and active instances
+- **Error Handling**: Graceful degradation and error reporting
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Technology Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Frontend**: React 18 + TypeScript + Vite
+- **Styling**: Tailwind CSS with custom Aurora/Genesis color schemes
+- **Animations**: Framer Motion for smooth interactions
+- **API Integration**: Axios with comprehensive error handling
+- **Icons**: Lucide React for consistent iconography
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Setup Instructions
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. **Configure Environment**:
+   ```bash
+   cp .env.example .env
+   # Update VITE_API_URL to match your backend deployment
+   ```
+
+3. **Start Development Server**:
+   ```bash
+   npm run dev
+   ```
+
+## API Integration
+
+The frontend connects to the Aurora Genesis Engine backend API with the following endpoints:
+
+- `POST /api/v1/personas/{persona_id}/rehydrate` - Activate persona instances
+- `POST /api/v1/orchestrator/chat` - Send messages to active personas
+- `POST /api/v1/are/run_burn/{instance_id}` - Execute Controlled Burn tests
+- `GET /` - Health check endpoint
+
+## Usage Guide
+
+1. **Activate a Persona**: Enter a persona blueprint ID and click "Activate Persona"
+2. **Start Chatting**: Use the chat interface to interact with your active persona
+3. **Run Tests**: Use the A.R.E. panel to run Controlled Burn validation tests
+4. **Monitor System**: Check the system status panel for health and performance metrics
+
+## Design Philosophy
+
+The interface embodies the Aurora Genesis aesthetic with:
+- **Glass morphism effects** for modern, ethereal appearance
+- **Aurora/Genesis color gradients** reflecting the dual nature of the system
+- **Smooth animations** providing feedback and enhancing user experience
+- **Responsive design** ensuring optimal experience across all devices
+
+## Production Deployment
+
+Update the `VITE_API_URL` environment variable to point to your deployed backend service before building for production.
+
+```bash
+npm run build
 ```
