@@ -1,9 +1,0 @@
-fastapi
-uvicorn[standard]
-pydantic
-sqlalchemy
-psycopg2-binary
-google-cloud-secret-manager
-python-dotenv
-google-generativeai
-jsonschema
